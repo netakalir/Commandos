@@ -4,22 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Commandos
+namespace Commandos.Models
 {
     public class CommandoSoldier
     {
         private string Name;
-        private char CodeName;
-        private List<string> Tools = new List<string> { "Hammer", "chisel", "rope", "bag", "water bottle" };
+        private char CodeName { get;set; }
+        private string[] Tools = new string[5]{ "Hammer", "chisel", "rope", "bag", "water bottle" };
         private string Status;
 
 
 
-        public CommandoSoldier(string name, char codeName, string status)
+        public CommandoSoldier(string name, char codeName)
         {
             Name = name;
             CodeName = codeName;
-            Status = status;
         }
 
         public void walk()
@@ -39,6 +38,36 @@ namespace Commandos
         {
             Console.WriteLine($"'{CodeName}' is attack now");
         }
+        public void SayName(string commanderRank)
+        {
+            if (commanderRank == "GENERAL")
+            {
+                Console.WriteLine(Name);
+            }
+
+            else if (commanderRank == "COLONEL")
+            {
+                Console.WriteLine(CodeName);
+            }
+
+            else
+            {
+                Console.WriteLine("Your classification level is not compatible with receiving the measure.");
+            }
+
+        }
+
+        public void SetCodeName(char newCodeName)
+        {
+            CodeName = newCodeName;
+        }
+        public void GetCodeName()
+        {
+            Console.WriteLine(CodeName);
+        }
+
+
+
 
     }
 }
