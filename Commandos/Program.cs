@@ -27,6 +27,20 @@ class Program
         AirCommando airCommando = new AirCommando("yosi", 'y');
         airCommando.parachuting();
 
+        CommandoSoldier[] soldirs = new CommandoSoldier[] {sol, seaCommando , airCommando } ;
+        
+        Console.WriteLine(soldirs.Length);
+        Console.WriteLine(soldirs.GetType());
+
+        foreach (CommandoSoldier soldier in soldirs)
+        {
+            soldier.Attack();
+            Console.WriteLine(soldier.GetType());
+
+        }
+
+
 
     }
+
 }
