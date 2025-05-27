@@ -34,10 +34,11 @@ namespace Commandos.Models
             Status = "hiding";
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"'{CodeName}' is attack now");
         }
+
         public void SayName(string commanderRank)
         {
             if (commanderRank == "GENERAL")

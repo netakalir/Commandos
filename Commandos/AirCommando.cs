@@ -17,5 +17,14 @@ namespace Commandos.Models
         {
             Console.WriteLine("parachuting went into action");
         }
+
+        public override void Attack()
+        {
+            Console.WriteLine("air commando solider attak");
+        }
     }
+
+        
+
+    
 }
