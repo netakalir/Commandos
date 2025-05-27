@@ -9,16 +9,16 @@ namespace Commandos
     public class CommandoSoldier
     {
         private string Name;
-        private char KoodName;
+        private char CodeName;
         private List<string> Tools = new List<string> { "Hammer", "chisel", "rope", "bag", "water bottle" };
         private string Status;
 
 
 
-        public CommandoSoldier(string name, char koodName, string status)
+        public CommandoSoldier(string name, char codeName, string status)
         {
             Name = name;
-            KoodName = koodName;
+            CodeName = codeName;
             Status = status;
         }
 
@@ -37,7 +37,7 @@ namespace Commandos
 
         public void Attack()
         {
-            Console.WriteLine($"'{KoodName}' is attack now");
+            Console.WriteLine($"'{CodeName}' is attack now");
         }
 
     }
