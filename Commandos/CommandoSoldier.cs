@@ -39,6 +39,23 @@ namespace Commandos
         {
             Console.WriteLine($"'{CodeName}' is attack now");
         }
+        public void SayName(string commanderRank)
+        {
+            if (commanderRank == "GENERAL")
+            {
+                Console.WriteLine(Name);
+            }
 
+            else if (commanderRank == "COLONEL")
+            {
+                Console.WriteLine(CodeName);
+            }
+
+            else
+            {
+                Console.WriteLine("Your classification level is not compatible with receiving the measure.");
+            }
+
+        }
     }
 }
