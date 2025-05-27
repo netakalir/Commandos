@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Commandos.Models
 {
-    internal class AirCommando:CommandoSoldier
+    public class AirCommando:CommandoSoldier
     {
         public AirCommando(string name , char codeName) :base(name, codeName)
         {

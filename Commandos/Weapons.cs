@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Xml.Linq;
 
-namespace Commandos
+namespace Commandos.Models
 {
     public class Weapons
     {
