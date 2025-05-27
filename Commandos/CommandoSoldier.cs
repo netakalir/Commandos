@@ -9,17 +9,16 @@ namespace Commandos
     public class CommandoSoldier
     {
         private string Name;
-        private char CodeName;
-        private List<string> Tools = new List<string> { "Hammer", "chisel", "rope", "bag", "water bottle" };
+        private char CodeName { get;set; }
+        private string[] Tools = new string[5]{ "Hammer", "chisel", "rope", "bag", "water bottle" };
         private string Status;
 
 
 
-        public CommandoSoldier(string name, char codeName, string status)
+        public CommandoSoldier(string name, char codeName)
         {
             Name = name;
             CodeName = codeName;
-            Status = status;
         }
 
         public void walk()
@@ -57,5 +56,18 @@ namespace Commandos
             }
 
         }
+
+        public void SetCodeName(char newCodeName)
+        {
+            CodeName = newCodeName;
+        }
+        public void GetCodeName()
+        {
+            Console.WriteLine(CodeName);
+        }
+
+
+
+
     }
 }
