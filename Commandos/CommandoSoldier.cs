@@ -58,6 +58,11 @@ namespace Commandos.Models
 
         }
 
+
+        public string GetName()
+        {
+            return Name;
+        }
         public void SetCodeName(char newCodeName)
         {
             CodeName = newCodeName;

@@ -20,11 +20,11 @@ namespace Commandos.Models
 
         public override void Attack()
         {
-            Console.WriteLine("air commando solider attak");
+            Console.WriteLine($"air commando {GetName()} solider attak");
         }
     }
 
         
-
+    
     
 }
