@@ -11,19 +11,56 @@ namespace Commandos.Models
         private string Name;
         private int Life;
         private string StatusLife;
+        string NameOrgistion;
 
 
-        public Enemy(string name, string statusLife ,int life = 100) 
+        public Enemy(string nameOrgistion, string name, int life = 100)
         {
-            Name = name;    
+            NameOrgistion = nameOrgistion;
+            Name = name;
             Life = life;
-            StatusLife = statusLife;
+            StatusLife = "live";
         }
 
-        public void Scream()
+        public string Scream()
         {
-            Console.WriteLine("Im ememy!!!");
+            return "Im ememy!!!";
         }
+
+        public string getName()
+        {
+            return Name;
+        }
+        public void setStatus()
+        {
+            if (Life <= 0)
+            {
+                StatusLife = "dead";
+                Console.WriteLine("The terrorist is dead.!");
+
+
+            }
+        }
+
+        public string getStatus()
+        {
+            return StatusLife;
+        }
+
+
+        public int getLife()
+        {
+            return Life;
+        }
+
+        public void setLife()
+        {
+            
+            Life--;
+            Console.WriteLine("Heeeeeeeeeee i was hurt!");
+            setStatus();
+        }
+
 
 
 

@@ -9,15 +9,40 @@ namespace Commandos
 {
     public class EnemyFactory
     {
+        static Random random = new Random();
         public List<Enemy> enemyList = new List<Enemy>();
+        //static List<string> nameOrgistionList = new List<string> { "Hamas","Hizzblla","Airan" };
+        static List<string> nameTerroristList = new List<string> { "Mahmod", "Df", "Yosof" };
 
 
-        public void createInstance(int amountInstance, Enemy typeOfInstance)
+
+        public void createInstance(string typeOfInstance, int amountInstance)
         {
-            for (int i = 1; i <= amountInstance; i++)
+            for (int i = 0; i < amountInstance; i++)
             {
-                enemyList.Add(typeOfInstance);
+                switch (typeOfInstance)
+                {
+                    case "Hamas":
+                        enemyList.Add(new Enemy("Hamas", nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
+                        break;
+                    case "Hizzblla":
+                        enemyList.Add(new Enemy("Hizzblla", nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
+                        break;
+                    case "Airan":
+                        enemyList.Add(new Enemy("Airan", nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
+                        break;
+
+                }
             }
         }
+
+        public List<Enemy> GetEnemyList()
+        {
+            return enemyList;
+        }
+
+
+
+
     }
 }

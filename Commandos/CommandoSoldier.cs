@@ -9,11 +9,11 @@ namespace Commandos.Models
     public class CommandoSoldier
     {
         private string Name;
-        private char CodeName { get;set; }
-        private string[] Tools = new string[5]{ "Hammer", "chisel", "rope", "bag", "water bottle" };
+        private char CodeName { get; set; }
+        private string[] Tools = new string[5] { "Hammer", "chisel", "rope", "bag", "water bottle" };
         private string Status;
-
-
+        private Weapons Weapon;
+        private Enemy enemy;
 
         public CommandoSoldier(string name, char codeName)
         {
@@ -26,7 +26,6 @@ namespace Commandos.Models
             Console.WriteLine("Commando soldier walks");
             Status = "walk";
         }
-
 
         public void Hide()
         {
@@ -58,6 +57,10 @@ namespace Commandos.Models
 
         }
 
+        public string GetName()
+        {
+            return Name;
+        }
         public void SetCodeName(char newCodeName)
         {
             CodeName = newCodeName;
@@ -65,6 +68,16 @@ namespace Commandos.Models
         public void GetCodeName()
         {
             Console.WriteLine(CodeName);
+        }
+
+        public Weapons GetWeapon()
+        {
+            return Weapon;
+        }
+
+        public void SetWeapon(Weapons weapon)
+        {
+            Weapon = weapon;
         }
 
 

@@ -8,12 +8,12 @@ namespace Commandos.Models
 {
     public class SeaCommando : CommandoSoldier
     {
-        public SeaCommando(string name, char codeName) : base(name, codeName)
+        public SeaCommando(string name, char codeName):base(name, codeName)
         {
 
         }
 
-        public void Swimming ()
+        public void Swimming()
         {
             Console.WriteLine("Swimming went into action");
         }
@@ -21,7 +21,8 @@ namespace Commandos.Models
         public override void Attack()
         {
             Console.WriteLine("sea commando solider attak");
+
         }
     }
-    
+
 }
