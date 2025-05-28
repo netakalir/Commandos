@@ -16,7 +16,7 @@ namespace Commandos.Models
 
 
 
-    public Weapons(string name , string manuFacturer , int numberOfBoalls) 
+        public Weapons(string name, string manuFacturer, int numberOfBoalls)
         {
             Name = name;
             Manufacturer = manuFacturer;
@@ -24,21 +24,21 @@ namespace Commandos.Models
         }
 
 
-    public string Shoot()
+        public string Shoot()
         {
             NumberOfBalls--;
             return $"BOOOOMMMMM (Shot by {Name})";
         }
 
-    public int getNumOfBalls()
+        public int getNumOfBalls()
         {
             return NumberOfBalls;
         }
-    public string getManuFacturer()
+        public string getManuFacturer()
         {
             return Manufacturer;
         }
-    public string getName()
+        public string getName()
         {
             return Name;
         }

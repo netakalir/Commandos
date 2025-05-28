@@ -11,9 +11,9 @@ namespace Commandos
     {
         static Random random = new Random();
         public List<Enemy> enemyList = new List<Enemy>();
-        static List<string> nameOrgistionList = new List<string> { "Hamas","Hizzblla","Airan" };
-        static List<string> nameTerroristList = new List<string> { "Mahmod","Df","Yosof" };
-        
+        //static List<string> nameOrgistionList = new List<string> { "Hamas","Hizzblla","Airan" };
+        static List<string> nameTerroristList = new List<string> { "Mahmod", "Df", "Yosof" };
+
 
 
         public void createInstance(string typeOfInstance, int amountInstance)
@@ -23,17 +23,26 @@ namespace Commandos
                 switch (typeOfInstance)
                 {
                     case "Hamas":
-                        enemyList.Add(new Enemy(nameOrgistionList[0], nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
+                        enemyList.Add(new Enemy("Hamas", nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
                         break;
                     case "Hizzblla":
-                        enemyList.Add(new Enemy(nameOrgistionList[1], nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
+                        enemyList.Add(new Enemy("Hizzblla", nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
                         break;
                     case "Airan":
-                        enemyList.Add(new Enemy(nameOrgistionList[2], nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
+                        enemyList.Add(new Enemy("Airan", nameTerroristList[random.Next(0, nameTerroristList.Count - 1)], 100));
                         break;
 
                 }
             }
         }
+
+        public List<Enemy> GetEnemyList()
+        {
+            return enemyList;
+        }
+
+
+
+
     }
 }

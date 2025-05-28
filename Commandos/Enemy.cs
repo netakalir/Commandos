@@ -14,10 +14,10 @@ namespace Commandos.Models
         string NameOrgistion;
 
 
-        public Enemy(string nameOrgistion, string name ,int life = 100) 
+        public Enemy(string nameOrgistion, string name, int life = 100)
         {
             NameOrgistion = nameOrgistion;
-            Name = name;    
+            Name = name;
             Life = life;
             StatusLife = "live";
         }
@@ -35,19 +35,30 @@ namespace Commandos.Models
         {
             if (Life <= 0)
             {
-                StatusLife = "dad";
+                StatusLife = "dead";
+                Console.WriteLine("The terrorist is dead.!");
+
+
             }
         }
-        
+
         public string getStatus()
         {
             return StatusLife;
         }
 
 
-        public int life()
+        public int getLife()
         {
             return Life;
+        }
+
+        public void setLife()
+        {
+            
+            Life--;
+            Console.WriteLine("Heeeeeeeeeee i was hurt!");
+            setStatus();
         }
 
 
