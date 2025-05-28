@@ -55,7 +55,7 @@ namespace Commandos.Models
 
         public void setLife()
         {
-            
+
             Life--;
             Console.WriteLine("Heeeeeeeeeee i was hurt!");
             setStatus();

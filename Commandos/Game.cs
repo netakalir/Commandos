@@ -43,7 +43,7 @@ namespace Commandos.Models
                     Commandos[i].SetWeapon(Weapons[i]);
                 }
             }
-            
+
             for (int i = 0; i < Enemys.Count; i++)
             {
                 Commandos[i].Attack();
@@ -51,9 +51,9 @@ namespace Commandos.Models
                 {
                     Enemys[i].setLife();
                 }
-                //Enemys[i].setStatus();
+
             }
-            
+
         }
 
     }

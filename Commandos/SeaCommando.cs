@@ -8,7 +8,7 @@ namespace Commandos.Models
 {
     public class SeaCommando : CommandoSoldier
     {
-        public SeaCommando(string name, char codeName):base(name, codeName)
+        public SeaCommando(string name, char codeName) : base(name, codeName)
         {
 
         }
